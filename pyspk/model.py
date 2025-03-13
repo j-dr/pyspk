@@ -491,7 +491,7 @@ def sup_model(SO, z, fb_a=None, fb_pow=None, fb_pivot=1, M_halo=None, fb=None, e
 
     sup = x0 - (x0 - x1) * _np.exp(-x2 * f_b)
 
-    sup[mask] = _np.NAN
+    sup[mask] = _np.nan
 
     if errors:
         raw_table = _pkgutil.get_data(__name__, 'stat_errors_' + str (SO) + '.csv').decode('utf-8').splitlines()
